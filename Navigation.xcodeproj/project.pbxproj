@@ -10,19 +10,20 @@
 		964F902829DF039100C3C2F3 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964F902729DF039100C3C2F3 /* Post.swift */; };
 		964F902A29DF085800C3C2F3 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964F902929DF085800C3C2F3 /* InfoViewController.swift */; };
 		9652E3E929DED70E00A90970 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9652E3E829DED70E00A90970 /* FeedViewController.swift */; };
-		9652E3EB29DED71E00A90970 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9652E3EA29DED71E00A90970 /* ProfileViewController.swift */; };
 		9652E3ED29DEDB2F00A90970 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9652E3EC29DEDB2F00A90970 /* PostViewController.swift */; };
 		9670C08829DC7F9D00E2B737 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9670C08729DC7F9D00E2B737 /* AppDelegate.swift */; };
 		9670C08A29DC7F9D00E2B737 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9670C08929DC7F9D00E2B737 /* SceneDelegate.swift */; };
 		9670C09129DC7FA200E2B737 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9670C09029DC7FA200E2B737 /* Assets.xcassets */; };
 		9670C09429DC7FA200E2B737 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9670C09229DC7FA200E2B737 /* LaunchScreen.storyboard */; };
+		967635ED29EB13A800D7FE95 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967635EC29EB13A800D7FE95 /* ProfileHeaderView.swift */; };
+		967635EF29EB13BD00D7FE95 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967635EE29EB13BD00D7FE95 /* ProfileViewController.swift */; };
+		96EC17CA29E442740041726C /* FeelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EC17C929E442740041726C /* FeelViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		964F902729DF039100C3C2F3 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		964F902929DF085800C3C2F3 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		9652E3E829DED70E00A90970 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
-		9652E3EA29DED71E00A90970 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		9652E3EC29DEDB2F00A90970 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		9670C08429DC7F9D00E2B737 /* Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9670C08729DC7F9D00E2B737 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +31,9 @@
 		9670C09029DC7FA200E2B737 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9670C09329DC7FA200E2B737 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9670C09529DC7FA200E2B737 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		967635EC29EB13A800D7FE95 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		967635EE29EB13BD00D7FE95 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		96EC17C929E442740041726C /* FeelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +50,7 @@
 		9670C07B29DC7F9D00E2B737 = {
 			isa = PBXGroup;
 			children = (
+				967635EB29EB12FE00D7FE95 /* Profile */,
 				9670C08629DC7F9D00E2B737 /* Navigation */,
 				9670C08529DC7F9D00E2B737 /* Products */,
 			);
@@ -65,7 +70,7 @@
 				9670C08729DC7F9D00E2B737 /* AppDelegate.swift */,
 				9670C08929DC7F9D00E2B737 /* SceneDelegate.swift */,
 				9652E3E829DED70E00A90970 /* FeedViewController.swift */,
-				9652E3EA29DED71E00A90970 /* ProfileViewController.swift */,
+				96EC17C929E442740041726C /* FeelViewController.swift */,
 				9652E3EC29DEDB2F00A90970 /* PostViewController.swift */,
 				964F902929DF085800C3C2F3 /* InfoViewController.swift */,
 				964F902729DF039100C3C2F3 /* Post.swift */,
@@ -74,6 +79,15 @@
 				9670C09529DC7FA200E2B737 /* Info.plist */,
 			);
 			path = Navigation;
+			sourceTree = "<group>";
+		};
+		967635EB29EB12FE00D7FE95 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				967635EC29EB13A800D7FE95 /* ProfileHeaderView.swift */,
+				967635EE29EB13BD00D7FE95 /* ProfileViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,10 +162,12 @@
 			files = (
 				9652E3ED29DEDB2F00A90970 /* PostViewController.swift in Sources */,
 				9670C08829DC7F9D00E2B737 /* AppDelegate.swift in Sources */,
-				9652E3EB29DED71E00A90970 /* ProfileViewController.swift in Sources */,
+				967635EF29EB13BD00D7FE95 /* ProfileViewController.swift in Sources */,
 				964F902A29DF085800C3C2F3 /* InfoViewController.swift in Sources */,
+				967635ED29EB13A800D7FE95 /* ProfileHeaderView.swift in Sources */,
 				964F902829DF039100C3C2F3 /* Post.swift in Sources */,
 				9652E3E929DED70E00A90970 /* FeedViewController.swift in Sources */,
+				96EC17CA29E442740041726C /* FeelViewController.swift in Sources */,
 				9670C08A29DC7F9D00E2B737 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
