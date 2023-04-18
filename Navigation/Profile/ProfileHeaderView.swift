@@ -31,14 +31,14 @@ class ProfileHeaderView: UIView {
         
         return label
     }()
-    private let bioTextField: UITextField = {
-        let field = UITextField()
-        field.text = "Музыкант, Фотограф"
-        field.font = UIFont.systemFont(ofSize: 14)
-        field.textColor = .gray
-        field.borderStyle = .none
-        field.translatesAutoresizingMaskIntoConstraints = false
-        return field
+    private let bioTextLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Музыкант, Фотограф"
+        label.font = UIFont.systemFont(ofSize: 14)
+        label.textColor = .gray
+
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
     }()
     private let followButton: UIButton = {
         let button = UIButton()
@@ -82,11 +82,11 @@ class ProfileHeaderView: UIView {
             nameLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
             nameLabel.topAnchor.constraint(equalTo: profilePictureImageView.topAnchor),
             
-            bioTextField.leadingAnchor.constraint(equalTo: profilePictureImageView.trailingAnchor, constant: 16),
-            bioTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
-            bioTextField.centerYAnchor.constraint(equalTo: profilePictureImageView.centerYAnchor),
+            bioTextLabel.leadingAnchor.constraint(equalTo: profilePictureImageView.trailingAnchor, constant: 16),
+            bioTextLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
+            bioTextLabel.centerYAnchor.constraint(equalTo: profilePictureImageView.centerYAnchor),
             
-            followButton.topAnchor.constraint(equalTo: bioTextField.bottomAnchor, constant: 60),
+            followButton.topAnchor.constraint(equalTo: bioTextLabel.bottomAnchor, constant: 60),
             followButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             followButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
             followButton.heightAnchor.constraint(equalToConstant: 44)
@@ -95,11 +95,11 @@ class ProfileHeaderView: UIView {
     private func addSubview() {
         addSubview(profilePictureImageView)
         addSubview(nameLabel)
-        addSubview(bioTextField)
+        addSubview(bioTextLabel)
         addSubview(followButton)
     }
     @objc func buttonPressed() {
-        if let bioText = bioTextField.text {
+        if let bioText = bioTextLabel.text {
             print("Мой статуса \(bioText)")
         } else {
             print("Нет Статус")
