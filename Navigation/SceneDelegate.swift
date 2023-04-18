@@ -19,15 +19,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let feedNavigationController = UINavigationController()
         feedNavigationController.tabBarItem = UITabBarItem(title: "Лента", image: UIImage(systemName: "list.dash"), tag: 0)
+        feedNavigationController.title = "Лента"
         
         let feedViewController = FeedViewController()
         feedNavigationController.viewControllers = [feedViewController]
-        
-        let feelNavigationController = UINavigationController()
-        feelNavigationController.tabBarItem = UITabBarItem(title: "Доступ", image: UIImage(systemName: "bolt"), tag: 0)
-        
-        let feelViewController = FeelViewController()
-        feelNavigationController.viewControllers = [feelViewController]
         
         let profileNavigationController = UINavigationController()
         profileNavigationController.tabBarItem = UITabBarItem(title: "Профиль", image: UIImage(systemName: "person.circle"), tag: 1)
@@ -35,7 +30,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let profileViewController = ProfileViewController()
         profileNavigationController.viewControllers = [profileViewController]
         
-        tabBarController.viewControllers = [feedNavigationController, profileNavigationController, feelNavigationController]
+        tabBarController.viewControllers = [feedNavigationController, profileNavigationController,]
         
         window = UIWindow(windowScene: windowScene)
         window?.rootViewController = tabBarController

@@ -13,18 +13,23 @@ class FeedViewController: UIViewController {
     
     private var post: Post!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        let post = Post(title: "Мой пост")
-        view.backgroundColor = .white
+    private var buttonPost: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Выбрать пост", for: .normal)
         button.addTarget(self, action: #selector(openPost), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(button)
+        return button
+    }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let post = Post(title: "Мой пост")
+        view.backgroundColor = .white
+        view.addSubview(buttonPost)
+        
         NSLayoutConstraint.activate([
-            button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            button.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+            buttonPost.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            buttonPost.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
         self.post = post
     }

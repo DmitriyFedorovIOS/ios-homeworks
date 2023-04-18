@@ -8,19 +8,24 @@
 import UIKit
 
 class InfoViewController: UIViewController {
+    private let showAlertButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Показать предупреждение", for: .normal)
+        button.setTitleColor(.systemBlue, for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(showAlert), for: .touchUpInside)
+        
+        return button
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        let showAlertButton = UIButton()
-        showAlertButton.setTitle("Показать предупреждение", for: .normal)
-        showAlertButton.setTitleColor(.systemBlue, for: .normal)
-        showAlertButton.addTarget(self, action: #selector(showAlert), for: .touchUpInside)
         view.addSubview(showAlertButton)
-        showAlertButton.translatesAutoresizingMaskIntoConstraints = false
         showAlertButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         showAlertButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
+    
     
     @objc func showAlert() {
         let alertController = UIAlertController(title: "Предупреждение ", message: "Это пример контроллера оповещения", preferredStyle: .alert)
