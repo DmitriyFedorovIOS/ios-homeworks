@@ -114,29 +114,21 @@ class ProfileHeaderView: UIView, UITextFieldDelegate {
             profilePictureImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 16),
             profilePictureImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             profilePictureImageView.widthAnchor.constraint(equalToConstant: 100),
-            profilePictureImageView.heightAnchor.constraint(equalToConstant: 100)
-        ])
-        
-        NSLayoutConstraint.activate([
+            profilePictureImageView.heightAnchor.constraint(equalToConstant: 100),
+
             nameLabel.leadingAnchor.constraint(equalTo: profilePictureImageView.trailingAnchor, constant: 16),
             nameLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
-            nameLabel.topAnchor.constraint(equalTo: profilePictureImageView.topAnchor)
-        ])
-        
-        NSLayoutConstraint.activate([
+            nameLabel.topAnchor.constraint(equalTo: profilePictureImageView.topAnchor),
+
             bioTextLabel.leadingAnchor.constraint(equalTo: profilePictureImageView.trailingAnchor, constant: 16),
             bioTextLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
-            bioTextLabel.centerYAnchor.constraint(equalTo: profilePictureImageView.centerYAnchor)
-        ])
-        
-        NSLayoutConstraint.activate([
+            bioTextLabel.centerYAnchor.constraint(equalTo: profilePictureImageView.centerYAnchor),
+
             followButton.topAnchor.constraint(equalTo: bioTextLabel.bottomAnchor, constant: 80),
             followButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             followButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-            followButton.heightAnchor.constraint(equalToConstant: 44)
-        ])
-        
-        NSLayoutConstraint.activate([
+            followButton.heightAnchor.constraint(equalToConstant: 44),
+     
             statusTextField.topAnchor.constraint(equalTo:  bioTextLabel.bottomAnchor, constant: 16),
             statusTextField.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 120),
             statusTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),

@@ -33,16 +33,9 @@ class ProfileViewController: UIViewController {
         view.backgroundColor = .systemGray  
         view.addSubview(headerView)
         view.addSubview(buttonProfileGreat)
-    }
-    
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
         headerView.translatesAutoresizingMaskIntoConstraints = false
-        headerView.frame = view.frame
-        view.addSubview(headerView)
         addedSubwiew()
         setupConstraintProfile()
-        
     }
     
     //MARK: - Add Subwiew
