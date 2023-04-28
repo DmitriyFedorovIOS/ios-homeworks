@@ -13,13 +13,13 @@ class ProfileViewController: UIViewController {
     
     //MARK: - Button
     
-    private let buttonProfileGreat: UIButton = {
+    private lazy var buttonProfileGreat: UIButton = {
         let button = UIButton()
         button.setTitle("Нажми", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
-        button.backgroundColor = UIColor(red: 0.12, green: 0.63, blue: 0.95, alpha: 1.00)
-        button.layer.cornerRadius = 8
-        button.layer.masksToBounds = false
+        button.setBackgroundImage(UIImage(named: "blue_pixel.png"), for: .normal)
+        button.layer.cornerRadius = 10
+        button.layer.masksToBounds = true
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
         
@@ -30,12 +30,13 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemGray  
+        view.backgroundColor = .white
         view.addSubview(headerView)
         view.addSubview(buttonProfileGreat)
         headerView.translatesAutoresizingMaskIntoConstraints = false
         addedSubwiew()
         setupConstraintProfile()
+        
     }
     
     //MARK: - Add Subwiew
@@ -71,4 +72,6 @@ class ProfileViewController: UIViewController {
             sender.setTitle("Нажми меня", for: .normal)
         }
     }
+    
 }
+

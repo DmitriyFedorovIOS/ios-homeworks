@@ -54,15 +54,16 @@ class ProfileHeaderView: UIView, UITextFieldDelegate {
         let button = UIButton()
         button.setTitle("Поменять статус", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
-        button.backgroundColor = UIColor(red: 0.12, green: 0.63, blue: 0.95, alpha: 1.00)
-        button.layer.cornerRadius = 8
+        button.setBackgroundImage(UIImage(named: "blue_pixel.png"), for: .normal)
+        button.layer.cornerRadius = 10
         button.layer.masksToBounds = true
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.layer.shadowColor = UIColor.black.cgColor
-        button.layer.shadowOffset = CGSize(width: 4, height: 4)
-        button.layer.shadowOpacity = 0.7
-        button.layer.shadowRadius = 4
-        button.layer.masksToBounds = false
+//        button.layer.shadowColor = UIColor.black.cgColor
+//        button.layer.shadowOffset = CGSize(width: 4, height: 4)
+//        button.layer.shadowOpacity = 0.7
+//        button.layer.shadowRadius = 4
+
+        
         
         
         return button

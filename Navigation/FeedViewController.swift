@@ -17,7 +17,7 @@ class FeedViewController: UIViewController {
  
     //MARK: - Button
     
-   private  let buttonOne: UIButton = {
+   private lazy var buttonOne: UIButton = {
        
         let button = UIButton()
         button.setTitle("Открыть пост", for: .normal)
@@ -30,7 +30,7 @@ class FeedViewController: UIViewController {
         return button
     }()
     
-    private let buttonTwo :UIButton = {
+    private lazy var buttonTwo :UIButton = {
         let button = UIButton()
         button.setTitle("Открыть пост", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
@@ -71,14 +71,10 @@ class FeedViewController: UIViewController {
     NSLayoutConstraint.activate([
         stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
         stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-    ])
-
-    NSLayoutConstraint.activate([
+    
         buttonOne.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-        buttonOne.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20)
-    ])
-
-    NSLayoutConstraint.activate([
+        buttonOne.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+    
         buttonTwo.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
         buttonTwo.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20)
     ])
