@@ -8,7 +8,7 @@
 import UIKit
 
 class PostViewController: UIViewController {
-    
+
     private let post: Post
     init(post: Post) {
         self.post = post
