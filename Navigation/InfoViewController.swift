@@ -8,7 +8,7 @@
 import UIKit
 
 class InfoViewController: UIViewController {
-    private let showAlertButton: UIButton = {
+    private lazy  var showAlertButton: UIButton = {
         let button = UIButton()
         button.setTitle("Показать предупреждение", for: .normal)
         button.setTitleColor(.systemBlue, for: .normal)

@@ -17,6 +17,7 @@
 		9670C09429DC7FA200E2B737 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9670C09229DC7FA200E2B737 /* LaunchScreen.storyboard */; };
 		967635ED29EB13A800D7FE95 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967635EC29EB13A800D7FE95 /* ProfileHeaderView.swift */; };
 		967635EF29EB13BD00D7FE95 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967635EE29EB13BD00D7FE95 /* ProfileViewController.swift */; };
+		96C1DB0929FBEB3F001FA932 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C1DB0829FBEB3F001FA932 /* LogInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		9670C09529DC7FA200E2B737 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		967635EC29EB13A800D7FE95 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		967635EE29EB13BD00D7FE95 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		96C1DB0829FBEB3F001FA932 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			children = (
 				967635EC29EB13A800D7FE95 /* ProfileHeaderView.swift */,
 				967635EE29EB13BD00D7FE95 /* ProfileViewController.swift */,
+				96C1DB0829FBEB3F001FA932 /* LogInViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 			files = (
 				9652E3ED29DEDB2F00A90970 /* PostViewController.swift in Sources */,
 				9670C08829DC7F9D00E2B737 /* AppDelegate.swift in Sources */,
+				96C1DB0929FBEB3F001FA932 /* LogInViewController.swift in Sources */,
 				967635EF29EB13BD00D7FE95 /* ProfileViewController.swift in Sources */,
 				964F902A29DF085800C3C2F3 /* InfoViewController.swift in Sources */,
 				967635ED29EB13A800D7FE95 /* ProfileHeaderView.swift in Sources */,
