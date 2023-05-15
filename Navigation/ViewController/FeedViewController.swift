@@ -14,12 +14,12 @@ class FeedViewController: UIViewController {
     private var post: Post!
     
     let stackView = UIStackView()
- 
+    
     //MARK: - Button
     
     
-   private lazy var buttonOne: UIButton = {
-       
+    private lazy var buttonOne: UIButton = {
+        
         let button = UIButton()
         button.setTitle("Открыть пост", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
@@ -68,18 +68,18 @@ class FeedViewController: UIViewController {
     //MARK: - Constrain
     
     private func setupConstraints() {
-
-    NSLayoutConstraint.activate([
-        stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-        stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-    
-        buttonOne.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-        buttonOne.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-    
-        buttonTwo.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-        buttonTwo.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20)
-    ])
-
+        
+        NSLayoutConstraint.activate([
+            stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            
+            buttonOne.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            buttonOne.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            
+            buttonTwo.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            buttonTwo.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20)
+        ])
+        
     }
     
     //MARK: - Add Subwiew

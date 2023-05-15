@@ -9,6 +9,8 @@ import UIKit
 
 class PostsTableViewCell: UITableViewCell {
     
+    private var viewCounter = 0
+    
     private lazy var authtorLabel: UILabel = {
         var authorLabel = UILabel()
         authorLabel.font = UIFont.systemFont(ofSize: 20, weight: .bold)
@@ -89,7 +91,7 @@ class PostsTableViewCell: UITableViewCell {
             descriptionLabel.topAnchor.constraint(equalTo: imagePostView.bottomAnchor, constant: 16),
             descriptionLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
             descriptionLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
-        
+            
             likeLabel.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 16),
             likeLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
             likeLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16),
@@ -107,6 +109,10 @@ class PostsTableViewCell: UITableViewCell {
         imagePostView.image = UIImage(named: model.image)
         likeLabel.text = "Лайки: " + String(model.likes)
         viewLabel.text = "Просмотры: \(model.view)"
+    }
+    func incrementPostViewsCounter() {
+        viewCounter += 1
+        viewLabel.text = "Просмотры: \(viewCounter)"
     }
 }
 

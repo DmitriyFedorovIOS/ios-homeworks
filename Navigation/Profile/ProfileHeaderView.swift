@@ -27,16 +27,16 @@ class ProfileHeaderView: UIView, UITextFieldDelegate {
     
     //MARK: - Name Label
     
-        private let nameLabel: UILabel = {
-            
+    private let nameLabel: UILabel = {
+        
         let label = UILabel()
         label.text = "Федоров Дмитрий"
         label.font = UIFont.boldSystemFont(ofSize: 18)
         label.textColor = .white
-            label.translatesAutoresizingMaskIntoConstraints = false
-            
-            return label
-        }()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        
+        return label
+    }()
     
     //MARK: - Status Label
     
@@ -62,7 +62,7 @@ class ProfileHeaderView: UIView, UITextFieldDelegate {
         button.layer.cornerRadius = 10
         button.layer.masksToBounds = true
         button.translatesAutoresizingMaskIntoConstraints = false
-
+        
         return button
     }()
     
@@ -76,7 +76,6 @@ class ProfileHeaderView: UIView, UITextFieldDelegate {
         
         var myTextField = UITextField()
         myTextField.placeholder = "Музыкант, Фотограф"
-        myTextField.text = " "
         myTextField.borderStyle = UITextField.BorderStyle.none
         myTextField.layer.backgroundColor = UIColor.white.cgColor
         myTextField.layer.borderWidth = 1
@@ -114,20 +113,20 @@ class ProfileHeaderView: UIView, UITextFieldDelegate {
             profilePictureImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             profilePictureImageView.widthAnchor.constraint(equalToConstant: 100),
             profilePictureImageView.heightAnchor.constraint(equalToConstant: 100),
-
+            
             nameLabel.leadingAnchor.constraint(equalTo: profilePictureImageView.trailingAnchor, constant: 16),
             nameLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
             nameLabel.topAnchor.constraint(equalTo: profilePictureImageView.topAnchor),
-
+            
             bioTextLabel.leadingAnchor.constraint(equalTo: profilePictureImageView.trailingAnchor, constant: 16),
             bioTextLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
             bioTextLabel.centerYAnchor.constraint(equalTo: profilePictureImageView.centerYAnchor),
-
+            
             followButton.topAnchor.constraint(equalTo: bioTextLabel.bottomAnchor, constant: 80),
             followButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             followButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
             followButton.heightAnchor.constraint(equalToConstant: 44),
-     
+            
             statusTextField.topAnchor.constraint(equalTo:  bioTextLabel.bottomAnchor, constant: 16),
             statusTextField.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 120),
             statusTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
@@ -148,13 +147,9 @@ class ProfileHeaderView: UIView, UITextFieldDelegate {
     //MARK: - Actions
     
     @objc private func pressedButton() {
-        if bioTextLabel.text?.isEmpty ?? true {
-                let alert = UIAlertController(title: "Ошибка", message: "Введите текст в поле", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
-            } else {
-                bioTextLabel.text = statusText
-            }
+
+        bioTextLabel.text = statusText
+
     }
     
     @objc func statusTextChanged(_ textField: UITextField) {

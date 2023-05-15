@@ -19,7 +19,7 @@ struct PostFirst {
 
 struct Post {
     var title: String
-   
+    
 }
 
 
