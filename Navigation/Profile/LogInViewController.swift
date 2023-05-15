@@ -44,7 +44,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         view.layer.borderColor = UIColor.lightGray.cgColor
         view.spacing = 0
         view.translatesAutoresizingMaskIntoConstraints = false
-       
+        
         return view
         
     }()
@@ -134,7 +134,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         removeKeyboardObservers()
     }
     
-
+    
     func setupView() {
         self.navigationController?.isNavigationBarHidden = true
         view.backgroundColor = .white
@@ -161,7 +161,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
             scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-       
+            
             logoImageView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             logoImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 120),
             logoImageView.widthAnchor.constraint(equalToConstant: 100),
@@ -233,6 +233,8 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
+    //MARK: - Actions
+    
     @objc func willShowKeyboard(_ notification: NSNotification) {
         let keyboardHeight = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.height ?? 0
         if scrollView.contentInset.bottom == 0 {
@@ -240,16 +242,24 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    //MARK: - Actions
     @objc func willHideKeyboard(_ notification: NSNotification) {
         scrollView.contentInset.bottom = 0.0
     }
     
     @objc private func pressButtonLogin() {
+        guard let email = loginTextField.text, !email.isEmpty,
+              let password = passwordTextField.text, !password.isEmpty else {
+            let alert = UIAlertController(title: "Ошибка", message: "Пожалуйста, заполните все поля", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default)
+            alert.addAction(okAction)
+            present(alert, animated: true)
+            return
+        }
         
         let profileViewController = ProfileViewController()
         navigationController?.pushViewController(profileViewController, animated: true)
     }
+
 }
 
 extension UITextField {

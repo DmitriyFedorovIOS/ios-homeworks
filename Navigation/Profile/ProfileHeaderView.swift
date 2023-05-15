@@ -12,6 +12,7 @@ class ProfileHeaderView: UIView, UITextFieldDelegate {
     //MARK: - ImageView Avatar
     
     private let profilePictureImageView: UIImageView = {
+        
         let view = UIImageView()
         view.image = UIImage(named: "profile_picture")
         view.contentMode = .scaleAspectFill
@@ -27,6 +28,7 @@ class ProfileHeaderView: UIView, UITextFieldDelegate {
     //MARK: - Name Label
     
         private let nameLabel: UILabel = {
+            
         let label = UILabel()
         label.text = "Федоров Дмитрий"
         label.font = UIFont.boldSystemFont(ofSize: 18)
@@ -39,6 +41,7 @@ class ProfileHeaderView: UIView, UITextFieldDelegate {
     //MARK: - Status Label
     
     private let bioTextLabel: UILabel = {
+        
         let label = UILabel()
         label.text = "Музыкант, Фотограф"
         label.font = UIFont.systemFont(ofSize: 14)
@@ -51,6 +54,7 @@ class ProfileHeaderView: UIView, UITextFieldDelegate {
     //MARK: - Button
     
     private let followButton: UIButton = {
+        
         let button = UIButton()
         button.setTitle("Поменять статус", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
@@ -58,14 +62,7 @@ class ProfileHeaderView: UIView, UITextFieldDelegate {
         button.layer.cornerRadius = 10
         button.layer.masksToBounds = true
         button.translatesAutoresizingMaskIntoConstraints = false
-//        button.layer.shadowColor = UIColor.black.cgColor
-//        button.layer.shadowOffset = CGSize(width: 4, height: 4)
-//        button.layer.shadowOpacity = 0.7
-//        button.layer.shadowRadius = 4
 
-        
-        
-        
         return button
     }()
     
@@ -76,6 +73,7 @@ class ProfileHeaderView: UIView, UITextFieldDelegate {
     //MARK: - TextField Status
     
     private lazy var statusTextField: UITextField = {
+        
         var myTextField = UITextField()
         myTextField.placeholder = "Музыкант, Фотограф"
         myTextField.text = " "
@@ -150,7 +148,13 @@ class ProfileHeaderView: UIView, UITextFieldDelegate {
     //MARK: - Actions
     
     @objc private func pressedButton() {
-        bioTextLabel.text = statusText
+        if bioTextLabel.text?.isEmpty ?? true {
+                let alert = UIAlertController(title: "Ошибка", message: "Введите текст в поле", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
+            } else {
+                bioTextLabel.text = statusText
+            }
     }
     
     @objc func statusTextChanged(_ textField: UITextField) {
