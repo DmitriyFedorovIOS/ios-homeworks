@@ -124,7 +124,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.navigationBar.isHidden = true
+        
         setupKeyboardObservers()
     }
     
@@ -236,10 +236,8 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     //MARK: - Actions
     
     @objc func willShowKeyboard(_ notification: NSNotification) {
-        let keyboardHeight = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.height ?? 0
-        if scrollView.contentInset.bottom == 0 {
-            scrollView.contentInset.bottom += keyboardHeight + 50
-        }
+        let keyboardHeight = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.height
+        scrollView.contentInset.bottom += keyboardHeight ?? 0.0
     }
     
     @objc func willHideKeyboard(_ notification: NSNotification) {
@@ -259,7 +257,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         let profileViewController = ProfileViewController()
         navigationController?.pushViewController(profileViewController, animated: true)
     }
-
+    
 }
 
 extension UITextField {
@@ -268,4 +266,6 @@ extension UITextField {
         self.leftViewMode = .always
     }
 }
+
+
 
